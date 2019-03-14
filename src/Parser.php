@@ -30,7 +30,7 @@ class Parser
     {
         foreach ($this->readFileFromStorage() as $line) {
             if ($pos = strpos($line, $regular)) {
-                echo 'Найдено вхождение(' . $regular . ') на позиции ' . $pos. ' в строке :' . $this->getCount();
+                return 'Найдено вхождение(' . $regular . ') на позиции ' . $pos . ' в строке :' . $this->getCount();
             }
         }
     }

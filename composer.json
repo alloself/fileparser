@@ -1,0 +1,18 @@
+{
+    "name": "me/fileparser",
+    "type": "library",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "FileParser\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    }
+}
