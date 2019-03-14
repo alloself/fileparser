@@ -1,0 +1,11 @@
+SELECT group_id
+     , count(*) AS row_count 
+     , min(id)  AS min_id     
+FROM  (
+   SELECT id
+        , group_id
+        , id - row_number() OVER (PARTITION BY group_id ORDER BY id) AS res
+   FROM   users
+   ) sub
+GROUP  BY group_id,
+ORDER  BY min_id; 
